@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1Fi Marketplace</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="phone-shell" aria-label="1Fi Shop">
+      <section class="hero" aria-label="No-cost EMI offer">
+        <div class="status-row" aria-hidden="true">
+          <span>09:56</span>
+          <span>83%</span>
+        </div>
+        <div class="hero-copy">
+          <span class="pill">✦ NO-COST EMIs</span>
+          <h1>Shop today,<br /><em>Pay later using</em><br />Mutual funds.</h1>
+          <p>No credit score required. No interest. Backed by your investments.</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="bag"></div>
+          <div class="product laptop"></div>
+          <div class="product phone"></div>
+          <div class="product bike"></div>
+          <div class="coin coin-a"></div>
+          <div class="coin coin-b"></div>
+          <div class="coin coin-c"></div>
+        </div>
+      </section>
+
+      <section class="shop-card">
+        <nav class="tabs" role="tablist" aria-label="Shop sections">
+          <button class="tab active" data-tab="brands" type="button" role="tab" aria-selected="true">Top Brands</button>
+          <button class="tab" data-tab="stores" type="button" role="tab" aria-selected="false">Nearby Stores</button>
+          <button class="tab" data-tab="marketplace" type="button" role="tab" aria-selected="false">1Fi Marketplace</button>
+        </nav>
+
+        <label class="search">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Search online stores..." />
+        </label>
+
+        <div class="state-row hidden" id="loadingState">Loading marketplace...</div>
+        <div class="state-row hidden error" id="errorState">Could not load products. Please retry.</div>
+        <div class="state-row hidden" id="emptyState">No matching results found.</div>
+
+        <section id="brandsPanel" class="panel" role="tabpanel">
+          <h2>Top Brands</h2>
+          <div class="list" id="brandList"></div>
+        </section>
+
+        <section id="storesPanel" class="panel hidden" role="tabpanel">
+          <h2>Nearby Stores</h2>
+          <div class="empty-state">
+            <strong>Nearby stores will appear here.</strong>
+            <span>This section is intentionally left blank for the assignment scope.</span>
+          </div>
+        </section>
+
+        <section id="marketplacePanel" class="panel hidden" role="tabpanel">
+          <div class="section-head">
+            <h2>1Fi Marketplace</h2>
+            <span id="productCount"></span>
+          </div>
+          <div class="market-grid" id="productList"></div>
+        </section>
+      </section>
+
+      <aside class="details-sheet hidden" id="detailsSheet" role="dialog" aria-modal="true" aria-live="polite">
+        <div class="sheet-handle"></div>
+        <button class="sheet-close" id="closeSheet" type="button" aria-label="Close product details">×</button>
+        <div id="detailsContent"></div>
+      </aside>
+
+      <nav class="bottom-nav" aria-label="Primary navigation">
+        <a href="#"><span>⌂</span>Home</a>
+        <a class="selected" href="#"><span>▣</span>Shop</a>
+        <a href="#"><span>₹</span>EMI Dues</a>
+        <a href="#"><span>↗</span>Limit</a>
+        <a href="#"><span>♙</span>Profile</a>
+      </nav>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
